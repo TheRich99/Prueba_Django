@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Persona(models.Model):
     # Campos del modelo Personas
+    documento = models.CharField(max_length=20, primary_key=True, default='')
+    tipo_documento=models.CharField(max_length=20, default='')
     nombre = models.CharField(max_length=100)
     # Otros campos que consideres relevantes
     
