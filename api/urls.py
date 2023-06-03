@@ -1,14 +1,11 @@
-from django.urls import path,include
-from rest_framework import routers
-from api import views
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import PersonaViewSet, TareaViewSet
 
-router=routers.DefaultRouter()
-
-router.register(r'personas', views.PersonaViewSet)
-router.register(r'tareas', views.TareaViewSet)
-
+router = DefaultRouter()
+router.register(r'personas', PersonaViewSet)
+router.register(r'tareas', TareaViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
 ]
-

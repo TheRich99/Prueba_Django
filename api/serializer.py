@@ -12,4 +12,5 @@ class TareaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tarea
         fields = '__all__'
-        
+
+
